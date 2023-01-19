@@ -1,0 +1,65 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    *{
+      font-family: 'Press Start 2P';
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- red container div -->
+  <div style="position: relative; display: inline-block ;">
+    <!-- smaller red container div -->
+    <div style="position: absolute; display: flex; width: 100%; align-items: center; padding:20px;">
+      <!-- player health -->
+      <div style="position: relative; height: 30px; width: 100%; display: flex; justify-content: flex-end;">
+        <div  style = 'background-color: red; height: 30px; width: 100%; border: 1px solid white; border-radius: 5px;'></div>
+        <div id="playerHealth" style="position: absolute; background-color: #818cf8; top: 0; right: 0; bottom: 0; width: 100%; border-radius: 5px;  border: 1px solid white; transition: ease-in-out  .5s;"></div>
+      </div>
+      <!-- timer -->
+      <div id="timer"
+      style="
+      background-color: rgb(61, 13, 13); 
+      width: 100px; 
+      height: 50px; 
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      border: 1px solid white;
+      border-radius: 5px;
+      ">100
+      </div>
+      <!-- enemy health -->
+      <div style="position: relative; height: 30px; width: 100%;">
+        <div  style = 'background-color: red; height: 30px; border-radius: 5px;  border: 1px solid white;'></div>
+        <div id="enemyHealth" style="position: absolute; background-color: #818cf8; top: 0; right: 0; left: 0; bottom: 0; border-radius: 5px;  border: 1px solid white; transition: ease-in .3s;"></div>
+      </div>
+      <div></div>
+    </div>
+    <div id='displayText'
+    style="position: absolute; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0 ;
+    "></div>
+    <canvas></canvas>
+  </div>  
+  <script src="./js/utils.js"></script>
+  <script src="./js/classes.js"></script>
+  <script src="index.js"></script>
+</body>
+
+
