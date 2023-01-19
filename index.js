@@ -290,7 +290,7 @@ window.addEventListener('keydown', (event) => {
         break
     }
 
-    if(enemy.position.y > 210){
+    if(enemy.position.y > 320){
       switch(event.key){
         case 'ArrowUp':
         enemy.velocity.y = -20
@@ -298,7 +298,7 @@ window.addEventListener('keydown', (event) => {
       }
     }
 
-    if(player.position.y > 210){
+    if(player.position.y > 320){
       switch(event.key){
         case 'w':
         player.velocity.y = -20
