@@ -77,6 +77,7 @@ class Fighter extends Sprite{
     this.isAttacking
     this.health = 100
     this.sprites = sprites
+    this.attackSwitcher = 0
     this.dead = false
 
     for (const sprite in sprites){
@@ -112,7 +113,13 @@ class Fighter extends Sprite{
   }
 
   attack(){
-    this.switchSprite('attack1')
+    if(this.attackSwitcher == 0){
+      this.switchSprite('attack1')
+      this.attackSwitcher = 1
+    }else{
+      this.switchSprite('attack2')
+      this.attackSwitcher = 0
+    }
     this.isAttacking = true
   }
 
@@ -132,6 +139,9 @@ class Fighter extends Sprite{
     } 
 
     if(this.image === this.sprites.attack1.image && this.framesCurrent < this.sprites.attack1.framesMax -1) return
+
+    if(this.image === this.sprites.attack2.image && this.framesCurrent < this.sprites.attack2.framesMax -1) return
+
 
     if(this.image === this.sprites.takeHit.image && this.framesCurrent < this.sprites.takeHit.framesMax -1) return
 
