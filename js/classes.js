@@ -114,11 +114,13 @@ class Fighter extends Sprite{
 
   attack(){
     if(this.attackSwitcher == 0){
-      this.switchSprite('attack1')
       this.attackSwitcher = 1
+
+      this.switchSprite('attack1')
     }else{
-      this.switchSprite('attack2')
       this.attackSwitcher = 0
+
+      this.switchSprite('attack2')
     }
     this.isAttacking = true
   }
